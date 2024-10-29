@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server Debugging",
+      "type": "node",
+      "request": "launch",
+      "program": "C:/Users/duff bastasa/Documents/MCM CPE/Web Design and Development/M1/Week 13/todo-list-app/server/index.js",
+      "args": [],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "sourceMaps": true
+    }
+  ]
+}

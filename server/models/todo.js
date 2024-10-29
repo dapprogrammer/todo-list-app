@@ -1,3 +1,7 @@
+/*
+
+
+
 import { Schema, model } from "mongoose";
 
 const OwnerSchema = new Schema({
@@ -20,3 +24,6 @@ const OwnerSchema = new Schema({
 const Todos = model("Owner", OwnerSchema);
 
 export default Todos;
+
+
+*/

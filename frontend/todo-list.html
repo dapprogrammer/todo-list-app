@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50vh;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Todo List</h1>
+        </header>
+        <ul id="todo-list">
+            <li class="todo-item">Learn mongoDB</li>
+            <li class="todo-item">Learn nodejs     </li>
+            <li class="todo-item">Build a Todo App </li>
+            <li class="todo-item">Bacame FullStack </li>
+        </ul>
+        <form action="/api/todo-list" method="post">
+          <button type="submit">Go to Edit todo</button>
+        </form>
+        <form action="/api/login" method="get"><button type="submit">Logout</button></form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      /* styles here */
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        position: relative;
+        flex-direction:column;
+      }
+ 
+      .registration-form {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 50%;
+        height: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+      .registration-form > h1 {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+      }
+      h1 > p {
+        position:absolute;
+        left: 0;
+        right: 0;
+      }
+      .registration-form > input {
+        margin:0px 10px 15px 10px;
+        border-radius: 4px;
+        border: 1px grey solid;
+      }
+      .registration-form > button {
+        background-color: skyblue;
+        border: none;
+        border-radius: 5px;
+        margin: 0px 10px 15px 10px;
+        cursor: pointer;
+      }
+      @media(max-width: 1350px) {
+        .registration-form {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 40%;
+        height: 80%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .registration-form > h1{
+        text-align: center;
+        font-family: Arial;
+        font-size:20px;
+        /* margin-top:20px 0px; */
+        }
+      }
+      @media(max-width: 1000px) {
+        .registration-form {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 50%;
+        height: 50%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .registration-form > h1{
+        text-align: center;
+        font-family: Arial;
+        font-size:20px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .container > img {
+        opacity: 0;
+        }
+        h1 > p {
+        position:relative;
+        left: 0;
+        right: 0;
+      }
+ 
+      }
+      @media screen and (max-width: 413px) {
+        .registration-form {
+            width: 60%;
+        }
+        h1 > p {
+        position:relative;
+        left: 0;
+        right: 0;
+      }
+      }
+      @media screen and (max-width: 335px) {
+        .registration-form {
+            width: 70%;
+        }
+        h1 > p {
+        position:relative;
+        left: 0;
+        right: 0;
+      }
+      }
+      @media screen and (max-width: 285px) {
+        .registration-form {
+            width: 80%;
+        }
+        h1 > p {
+        position:relative;
+        left: 0;
+        right: 0;
+      }
+      }
+      @media screen and (max-width: 240px) {
+        .registration-form {
+            width: 100%;
+        }
+        h1 > p {
+        position:relative;
+        left: 0;
+        right: 0;
+      }
+      }
+    </style>
+  </head>
+  <body>
+      <form action="/api/login" method="post" class="container">
+        <div class="registration-form">
+          <h1><p>USER</p></h1>
+          <input id="email" type="text" placeholder="Email" name="email" >
+          <input id="password" type="password" placeholder="Password" name="password" >
+          <input id="passwordR" type="password" placeholder="Confirm password" name="confirmPassword" s>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Todo</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50vh;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit Todo Item</h1>
+        </header>
+        <form action="/api/edit-todo" method="post">
+            <label for="todo-title">Todo Title:</label>
+            <input type="text" placeholder="Enter todo title" required>
+            <button type="submit">Save Changes</button>
+            <ul >
+              <li >Learn mongoDB <button>Remove</button></li>
+              <li >Learn   nodejs  <button > Remove</button></li>
+              <li>Build a Todo App <button >Remove</button></li>
+              <li >Bacame FullStack <button >Remove</button></li>
+          </ul>
+        </form>
+        <form action="/api/todo-list" method="get"><button type="submit">Cancel</button></form>
+    </div>
+</body>
+</html>

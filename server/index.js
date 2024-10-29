@@ -4,6 +4,8 @@ import connect from "./database/mongoDB.js";
 import todosRouter from "./routes/todos.js";
 import usersRouter from "./routes/users.js";
 
+import pageRouter from "./routes/router.js";
+
 const app = express();
 
 const port = 6969;
@@ -13,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // use the static middleware to serve static files
-app.use(express.static("public"));
+app.use(express.static('frontend'));
 
 app.get("/", (req, res) => {
   res.send("Hello Todo App!!!");
@@ -21,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", todosRouter);
 app.use("/api", usersRouter);
+app.use("/api", pageRouter);
 
 // attempt connection to mongodb
 connect();
